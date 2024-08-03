@@ -27,7 +27,7 @@ To get a local copy up and running, follow these simple steps:
 ### Installation
 
 1. Clone the repo:
-   git clone https://github.com/your-username/3d-model-gallery.git
+   git clone [https://github.com/your-username/3d-model-gallery.git](https://github.com/rahul-gupta-2004/cars-3d-models-website.git)
 2. Navigate to the project directory:
    cd 3d-model-gallery
 3. Serve the project using a live server or a local web server like Apache. Running the project directly from the local file system (e.g., opening index.html directly in the browser) may cause issues due to browser security restrictions.
