@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <title>3D Model Gallery</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #1a1a1a, #333);
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .box {
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .model-container {
+            width: 100%;
+            padding-top: 75%; /* Maintain aspect ratio */
+            position: relative;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .car-name {
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff4500, #ff6347); /* Gradient color */
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>3D Model Gallery</h1>
+    <div class="grid-container">
+        <!-- Repeat this box for each 3D model -->
+        <div class="box">
+            <div class="model-container">
+                <model-viewer src="models/cyberpunk_car.glb" camera-controls auto-rotate disable-zoom></model-viewer>
+            </div>
+            <div class="car-name"> Cyberpunk Car </div>
+        </div>
+        <div class="box">
+            <div class="model-container">
+                <model-viewer src="models/koenigsegg_one_pro.glb" camera-controls auto-rotate disable-zoom></model-viewer>
+            </div>
+            <div class="car-name"> Koenigsegg One Pro </div>
+        </div>
+        <div class="box">
+            <div class="model-container">
+                <model-viewer src="models/lamborghini_gallardo.glb" camera-controls auto-rotate disable-zoom></model-viewer>
+            </div>
+            <div class="car-name"> Lamborghini Gallardo </div>
+        </div>
+        <div class="box">
+            <div class="model-container">
+                <model-viewer src="models/lotus_exige.glb" camera-controls auto-rotate disable-zoom></model-viewer>
+            </div>
+            <div class="car-name"> Lotus Exige </div>
+        </div>
+        <div class="box">
+            <div class="model-container">
+                <model-viewer src="models/mclaren_f1_1993.glb" camera-controls auto-rotate disable-zoom></model-viewer>
+            </div>
+            <div class="car-name"> McLaren F1 1993 </div>
+        </div>
+        <div class="box">
+            <div class="model-container">
+                <model-viewer src="models/toyota_supra.glb" camera-controls auto-rotate disable-zoom></model-viewer>
+            </div>
+            <div class="car-name"> Toyota Supra </div>
+        </div>
+    </div>
+</body>
+
+</html>
